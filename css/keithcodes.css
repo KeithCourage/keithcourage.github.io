@@ -1,0 +1,396 @@
+/* General */
+
+html {
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  background-color: #d0f4f7;
+  color: #607476;
+  font-family:"Lato", sans-serif;
+  height: 100vh;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  color: #394546;
+  font-size: 2em;
+}
+
+h2 {
+  color: #4c5c5e;
+}
+
+/* Top Bar */
+
+#top-bar {
+  background: #394546;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  justify-content: space-evenly;
+  opacity: 0.9;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+#top-bar ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: auto;
+  padding-left: 0;
+  width: 100%;
+}
+
+#top-bar li {
+  display: inline;
+  padding: 10px 5px
+}
+
+#top-bar a {
+  color: #d0f4f7;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+#top-bar a:hover {
+  color: #607476;
+}
+
+/* Sections */
+
+section:nth-child(2) {
+  margin-top: 60px;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -80px;
+    visibility: hidden;
+}
+
+/* Scenes */
+
+.scene h1 {
+  color: white;
+  font-size: 3em;
+  text-align: center;
+  text-shadow: 2px 2px #4c5c5e;
+}
+
+.path {
+  background: url("../images/path.png") repeat-y center top;
+}
+
+.hero {
+  display: block;
+  margin: auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 200px;
+  z-index: 0;
+}
+
+/* Scene Transitions */
+
+.transition-top {
+  display: block;
+  margin: auto;
+  position: relative;
+  z-index: 100;
+}
+
+.transition-bottom {
+  display: block;
+  margin: -32px auto 0 auto;
+  position: relative;
+  z-index: 100;
+}
+
+.transition-door,
+.transition-door-closed {
+  display: block;
+  margin: -80px auto 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/* NPCs */
+
+.npc:nth-of-type(n+1) {
+  margin-top: -20px;
+}
+
+.npc:nth-of-type(odd) {
+  margin-right: 60%;
+}
+
+.npc:nth-of-type(odd) .bubble {
+  border-image: url("../images/speech-bubble-flip.png") 64 fill / 32px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.npc:nth-of-type(even) {
+  margin-left: 60%;
+}
+
+.npc:nth-of-type(even) .bubble {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.npc img {
+  display: block;
+}
+
+.npc:nth-of-type(odd) img {
+  margin-left: auto;
+}
+
+/* NPC Bubbles */
+
+.bubble {
+  border: 2px solid gray;
+  border-image: url("../images/speech-bubble.png") 64 fill / 32px;
+  border-image-repeat: round;
+  border-radius: 5px;
+  max-width: 10000px;
+  min-width: 100px;
+  padding: 2px 15px 30px;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 100;
+}
+
+.bubble a {
+  color: #4e8de1;
+}
+
+.bubble a:visited {
+  color: #8fb7ec;
+}
+
+.bubble a:hover {
+  color: #8fe5ec;
+}
+
+/* Title Section */
+
+#title {
+  margin-left: auto;
+  margin-right: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+#title div {
+  border: 5px solid #c0e8ec;
+  border-radius: 15px;
+  float: left;
+  margin-bottom: 20px;
+  padding: 15px;
+  text-align: center;
+}
+
+#splash-image {
+  float: right;
+}
+
+/* Skill Bar */
+
+#skill-bar {
+  clear: both;
+  margin-bottom: 20px;
+  padding: 1px;
+  text-align: center;
+  line-height: 4em;
+}
+
+#skill-bar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#skill-bar li {
+  background-color: #607476;
+  border-radius: 15px;
+  color: #d0f4f7;
+  display: inline;
+  padding: 1em;
+  margin: auto 3%;
+}
+
+#skill-bar a {
+  text-decoration: none;
+}
+
+/* Bio Section */
+
+#bio {
+  background: repeat-x url("../images/sky.png");
+  background-position: bottom;
+  text-align: center;
+}
+
+#bio p {
+  margin: auto auto 0px;
+  max-width: 500px;
+  padding-bottom: 40px;
+  font-size: 1.2em;
+}
+
+/* Experience Section */
+
+#experience {
+  border: solid;
+  border-image: url("../images/grass-border.png") 30 fill / 32px round;
+  border-width: 0 32px;
+  margin-bottom: -1px;
+  margin-top: 0px;
+}
+
+/* Education Section */
+
+#education {
+  border: solid;
+  border-image: url("../images/red-border.png") 30 fill / 32px round;
+  border-width: 0 32px;
+  margin-bottom: -1px;
+}
+
+/* Skills Section */
+
+#skills {
+  border: solid;
+  border-image: url("../images/gray-border.png") 30 fill / 32px round;
+  border-width: 0 32px;
+  margin-bottom: -1px;
+}
+
+/* Links Section */
+
+#links {
+  border: solid;
+  border-image: url("../images/red-border.png") 30 fill / 32px round;
+  border-width: 0 32px;
+  margin-bottom: -1px;
+}
+
+#links a img{
+  margin-bottom: 16px;
+}
+
+#links a img:hover {
+  opacity: 60%;
+}
+
+/* Contact Section */
+
+#contact {
+  border: solid;
+  border-image: url("../images/grass-border.png") 30 fill / 32px round;
+  border-width: 0 32px;
+  margin-bottom: 0;
+  padding-bottom: 100px;
+}
+
+/* Bottom Spacer */
+
+.spacer {
+  border-image: url("../images/water-border.png") 30 fill / 32px round;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  height: 370px;
+  margin-top: -30px;
+  position: relative;
+  z-index: -10;
+}
+
+#boat {
+  align-self: center;
+  margin-top: 100px;
+  padding-right: 40%;
+}
+
+#rocks {
+  align-self: flex-end;
+  margin-top: 80px;
+  padding-right: 20%;
+}
+
+/* Footer */
+
+footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  margin-top: -30px;
+  position: relative;
+  z-index: -10;
+}
+
+footer p {
+  align-self: flex-end;
+  color: #d0f4f7;
+  margin-bottom: 0;
+  padding: 0 12px 10px;
+}
+
+/* Mobile Devices */
+
+@media only screen and (max-width: 600px) {
+
+  /* Top Bar */
+
+  #top-bar {
+    visibility: hidden;
+  }
+
+  /* NPCs */
+
+  .npc:nth-of-type(odd) {
+    margin: auto;
+  }
+
+  .npc:nth-of-type(even) {
+    margin: auto;
+  }
+
+  .npc img {
+    margin-bottom: 10px;
+  }
+
+  /* Title Section */
+
+  #title div {
+    float: none;
+  }
+
+  #splash-image {
+    float: none;
+  }
+}
